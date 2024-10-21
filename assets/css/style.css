@@ -1,0 +1,182 @@
+/* cores do site*/
+
+:root {
+    --color1: #efca11;
+    --color2: #AA0000;
+    --color3: #c9a805;
+    --color4: #910000;
+      }
+
+*,
+*:hover {
+    transition: 0.3s all;
+        }
+
+.all {
+    margin: 0;
+    padding: 0;
+     }
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 110%;
+     }
+
+header{
+    background-image: url('../images/bg_header.png');
+    background-size: cover;
+} 
+/* MENU SOCIAL*/
+section#social ul{
+    background-color: white;
+    margin: 0;
+    padding: 0.2ren;
+}
+
+/* MENU PRINCIPAL */
+
+.navbar-toggler,
+.custom-toggler.navbar-toggler-icon {
+	border-color: #FFFFFF !important;
+}
+
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+#menu #navebarPrincipal ul li a {
+    margin: 0 1.1rem;
+}
+
+#menu #navebarPrincipal ul li a {
+    border-bottom: 1px solid transparent;
+    color: white;
+    font-size: 1.1rem;
+    padding: 0;
+    text-transform: lowercase;
+
+}
+
+#menu #navebarPrincipal ul li a:hover,
+#menu #navebarPrincipal ul li.active a {
+    color: var(--color1);
+    border-bottom: 1px solid var(--color1);
+}
+
+img.logo{
+    width: 10ren;
+}
+
+.bg-yellow{
+    background: url('../images/bg_red.png') repeat var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2ren 0;
+    margin-left: 40px; 
+    border-radius: 10px; 
+}
+
+.bg-yellow .address h3{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color2);
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.btn-login {
+    background-color: var(--color2); /* Usa uma cor de destaque do tema */
+    color: white;
+    border: none;
+    padding: 9px 20px;
+    margin-right: 20px;
+    
+    }
+    
+    .btn-login:hover {
+    background-color: var(--color1); /* Cor ao passar o mouse */
+    color: var(--color2);
+    
+    }
+
+
+
+/* SLIDE */
+img.slide {
+    width: 100%;
+}
+
+/*CONTEUDO*/
+section#content .content {
+    background: url('../images/bg_marrom.png') repeat var(--color3);
+}
+.bg-white {
+    background: white;
+}
+
+.bg-shadow{
+    box-shadow: 0 9px 0px 0px white, 0 10px 0px 0px white, 12px 0 6px -4px rgba(68, 68, 68,0.8), 12px 0 6px -4px rgba(68, 68, 68,0.8) ;
+}
+
+/*RODAPÉ */
+
+footer .footer {
+    background: url('../images/bg_white.png') var(--color2) repeat;
+}
+
+footer .footer p {
+    color: white;
+}
+
+/* A PIZZARIA */
+h3.title, body.cardapio h5{
+    text-transform: uppercase color;
+    color: var(--color2);
+}
+
+body.pizzaria p, body.cardapio p.card-text:first-child{
+    text-align: justify;
+}
+
+
+
+@media (min-width: 576px) {
+    /* celular */
+    
+    img.logo{
+        width: 10ren;
+    }
+}
+
+
+@media (min-width: 768px) {
+    /* celular / tablet */
+    
+    img.logo{
+        width: 10ren;
+    }
+}
+
+@media (min-width: 992px) {
+	/* pequenas telas */
+
+}
+
+@media (min-width: 1200px) {
+	/* grandes telas */
+
+}
+
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 48%; /* Mantém dois elementos na mesma linha e dá espaço para ambos */
+        max-width: 48%;
+    }
+}
