@@ -12,11 +12,12 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="./assets/jss/jss.js"></script>
 
-
-  <title>Pizzaria Nave | CARDÁPIO</title>
+    
+  <title>Pizzaria | CARDÁPIO</title>
 </head>
 
 <body class="cardapio">
@@ -28,7 +29,7 @@
           <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
             <h1 h1 class="d-block d-xl-block d-lg-block d-md-none d-sm-none">
               <a href="./index.html" title="Ir para a página inicial">
-                <img src="./assets/images/logo.png" alt="Logo da Pizzaria da Nave"></a>
+                <img src="./assets/images/logo.png" alt="Logo da Pizzaria"></a>
             </h1>
           </div>
           <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
@@ -38,19 +39,25 @@
                   <a class="nav-link" href="https://wa.me/552199999999" target="_blank"><img
                       src="./assets/images/wp.png" alt="ícone do Whatsapp" width="22"></a>
                 <li class="nav-item">
-                  <a class="nav-link" href="https://facebook.com/navesdoconhecimento" target="_blank"><img
+                  <a class="nav-link" href="https://facebook.com" target="_blank"><img
                       src="./assets/images/fb.png" alt="ícone do Facebook" width="22"></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="https://instagram.com/navesdoconhecimentorj" target="_blank"><img
+                  <a class="nav-link" href="https://instagram.com" target="_blank"><img
                       src="./assets/images/ig.png" alt="ícone do Instagram" width="22"></a>
                 </li>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="tel:2199999999" target="_blank"><img src="./assets/images/phone.png"
-                      alt="Telefone da Pizzaria da Nave" width="22"></a>
+                      alt="Telefone da Pizzaria " width="22"></a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="cart-icon"><img src="./assets/images/car.png" alt="Carrinho" width="22"><span id="cart-count">0</span></a>
+              </li>
+          </ul>
               </ul>
+
+              <button type="button" class="btn btn-login float-right">Fazer Login</button>
 
               <div class="clearfix"></div>
 
@@ -58,7 +65,7 @@
             <nav class="navbar navbar-expand-lg" id="menu">
               <h1 class="d-xi-none d-lg-none d-mb-block d-sm-block">
                 <a href="./index.html" title="Ir para a página inicial">
-                  <img src="./assets/images/logo.png" alt="Logo da Pizzaria da Nave" class="logo"></a>
+                  <img src="./assets/images/logo.png" alt="Logo da Pizzaria" class="logo"></a>
               </h1>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navebarPrincipal"
                 aria-controls="navebarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,16 +116,16 @@
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title">Pizza de Atum</h5>
-                    <p class="card-text">Maravilhosa Pizza de Atum, com muito Atum
-                    </p>
+                    <p class="card-text">Maravilhosa Pizza de Atum, com muito Atum</p>
                     <p class="card-text">
-                      <strong>Pequena - </strong> <span class="text-muted">R$ 19,90</span> <br>
-                      <strong>Média - </strong> <span class="text-muted">R$ 24,90</span> <br>
-                      <strong>Grande - </strong> <span class="text-muted">R$ 29,90</span> <br>
-                      <strong>Gigante - </strong> <span class="text-muted">R$ 35,90</span> <br>
+                      <select class="form-control pizza-size" data-name="Pizza de Atum">
+                        <option value="19.90" data-size="Pequena">Pequena - R$ 19,90</option>
+                        <option value="24.90" data-size="Média">Média - R$ 24,90</option>
+                        <option value="29.90" data-size="Grande">Grande - R$ 29,90</option>
+                        <option value="35.90" data-size="Gigante">Gigante - R$ 35,90</option>
+                      </select>
                     </p>
-                    <a href="./peca-agora.html" class="btn btn-block btn-go">Peça Agora</a>
-                  </div>
+                    <button class="btn btn-success add-to-cart" data-name="Pizza de Atum">Adicionar ao Carrinho</button>                 </div>
                 </div>
               </div>
             </div>
@@ -135,13 +142,14 @@
                     <p class="card-text">Maravilhosa Pizza de Calabresa, com muita Calabresa
                     </p>
                     <p class="card-text">
-                      <strong>Pequena - </strong> <span class="text-muted">R$ 19,90</span> <br>
-                      <strong>Média - </strong> <span class="text-muted">R$ 24,90</span> <br>
-                      <strong>Grande - </strong> <span class="text-muted">R$ 29,90</span> <br>
-                      <strong>Gigante - </strong> <span class="text-muted">R$ 35,90</span> <br>
+                      <select class="form-control pizza-size" data-name="Pizza de Calabresa">
+                        <option value="19.90" data-size="Pequena">Pequena - R$ 19,90</option>
+                        <option value="24.90" data-size="Média">Média - R$ 24,90</option>
+                        <option value="29.90" data-size="Grande">Grande - R$ 29,90</option>
+                        <option value="35.90" data-size="Gigante">Gigante - R$ 35,90</option>
+                      </select>
                     </p>
-                    <a href="./peca-agora.html" class="btn btn-block btn-go">Peça Agora</a>
-                  </div>
+                    <button class="btn btn-success add-to-cart" data-name="Pizza de Calabresa">Adicionar ao Carrinho</button></div>
                 </div>
               </div>
             </div>
@@ -158,13 +166,14 @@
                     <p class="card-text">Maravilhosa Pizza de camarão, com muito camarão
                     </p>
                     <p class="card-text">
-                      <strong>Pequena - </strong> <span class="text-muted">R$ 19,90</span> <br>
-                      <strong>Média - </strong> <span class="text-muted">R$ 24,90</span> <br>
-                      <strong>Grande - </strong> <span class="text-muted">R$ 29,90</span> <br>
-                      <strong>Gigante - </strong> <span class="text-muted">R$ 35,90</span> <br>
+                      <select class="form-control pizza-size" data-name="Pizza de Camarão">
+                        <option value="19.90" data-size="Pequena">Pequena - R$ 19,90</option>
+                        <option value="24.90" data-size="Média">Média - R$ 24,90</option>
+                        <option value="29.90" data-size="Grande">Grande - R$ 29,90</option>
+                        <option value="35.90" data-size="Gigante">Gigante - R$ 35,90</option>
+                      </select>
                     </p>
-                    <a href="./peca-agora.html" class="btn btn-block btn-go">Peça Agora</a>
-                  </div>
+                    <button class="btn btn-success add-to-cart" data-name="Pizza de Camarão">Adicionar ao Carrinho</button></div>
                 </div>
               </div>
             </div>
@@ -181,13 +190,14 @@
                     <p class="card-text">Maravilhosa Pizza de Frango com Catupiry, com muito Catupiry
                     </p>
                     <p class="card-text">
-                      <strong>Pequena - </strong> <span class="text-muted">R$ 19,90</span> <br>
-                      <strong>Média - </strong> <span class="text-muted">R$ 24,90</span> <br>
-                      <strong>Grande - </strong> <span class="text-muted">R$ 29,90</span> <br>
-                      <strong>Gigante - </strong> <span class="text-muted">R$ 35,90</span> <br>
+                      <select class="form-control pizza-size" data-name="Pizza de Frango Catupiry">
+                        <option value="19.90" data-size="Pequena">Pequena - R$ 19,90</option>
+                        <option value="24.90" data-size="Média">Média - R$ 24,90</option>
+                        <option value="29.90" data-size="Grande">Grande - R$ 29,90</option>
+                        <option value="35.90" data-size="Gigante">Gigante - R$ 35,90</option>
+                      </select>
                     </p>
-                    <a href="./peca-agora.html" class="btn btn-block btn-go">Peça Agora</a>
-                  </div>
+                    <button class="btn btn-success add-to-cart" data-name="Pizza de Frango Catupiry">Adicionar ao Carrinho</button> </div>
                 </div>
               </div>
             </div>
@@ -204,13 +214,14 @@
                     <p class="card-text">Maravilhosa Pizza de Mussarela, com muita Mussarela
                     </p>
                     <p class="card-text">
-                      <strong>Pequena - </strong> <span class="text-muted">R$ 19,90</span> <br>
-                      <strong>Média - </strong> <span class="text-muted">R$ 24,90</span> <br>
-                      <strong>Grande - </strong> <span class="text-muted">R$ 29,90</span> <br>
-                      <strong>Gigante - </strong> <span class="text-muted">R$ 35,90</span> <br>
+                      <select class="form-control pizza-size" data-name="Pizza de Mussarela">
+                        <option value="19.90" data-size="Pequena">Pequena - R$ 19,90</option>
+                        <option value="24.90" data-size="Média">Média - R$ 24,90</option>
+                        <option value="29.90" data-size="Grande">Grande - R$ 29,90</option>
+                        <option value="35.90" data-size="Gigante">Gigante - R$ 35,90</option>
+                      </select>
                     </p>
-                    <a href="./peca-agora.html" class="btn btn-block btn-go">Peça Agora</a>
-                  </div>
+                    <button class="btn btn-success add-to-cart" data-name="Pizza de Mussarela">Adicionar ao Carrinho</button> </div>
                 </div>
               </div>
             </div>
@@ -227,13 +238,14 @@
                     <p class="card-text">Maravilhosa Pizza portuguesa, com muita coisa gostosa
                     </p>
                     <p class="card-text">
-                      <strong>Pequena - </strong> <span class="text-muted">R$ 19,90</span> <br>
-                      <strong>Média - </strong> <span class="text-muted">R$ 24,90</span> <br>
-                      <strong>Grande - </strong> <span class="text-muted">R$ 29,90</span> <br>
-                      <strong>Gigante - </strong> <span class="text-muted">R$ 35,90</span> <br>
+                      <select class="form-control pizza-size" data-name="Pizza Portuguesa">
+                        <option value="19.90" data-size="Pequena">Pequena - R$ 19,90</option>
+                        <option value="24.90" data-size="Média">Média - R$ 24,90</option>
+                        <option value="29.90" data-size="Grande">Grande - R$ 29,90</option>
+                        <option value="35.90" data-size="Gigante">Gigante - R$ 35,90</option>
+                      </select>
                     </p>
-                    <a href="./peca-agora.html" class="btn btn-block btn-go">Peça Agora</a>
-                  </div>
+                    <button class="btn btn-success add-to-cart" data-name="Pizza Portuguesa">Adicionar ao Carrinho</button>   </div>
                 </div>
               </div>
             </div>
@@ -242,6 +254,7 @@
       </div>
 
   </section>
+
 
   <footer>
     <div class="all footer">
