@@ -1,0 +1,41 @@
+[33mcommit 7735d31c5de046d8dd89df5779e59946ad093d56[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: dayzintt <deividborges07@hotmail.com>
+Date:   Thu Oct 31 10:09:44 2024 -0300
+
+    Alterações na forma de login e admin para cadastro de produtos
+
+[33mcommit 3d7491e3d04a1de4dc71ec3e8d3dd6ce90e43f30[m
+Author: dayzintt <deividborges07@hotmail.com>
+Date:   Wed Oct 23 16:29:27 2024 -0300
+
+    Banco de Dados para Login
+
+[33mcommit c4df8f44c99b0fdaa9c956fa609317547057afad[m
+Author: dayzintt <deividborges07@hotmail.com>
+Date:   Mon Oct 21 10:56:01 2024 -0300
+
+    pagina peca-agora
+
+[33mcommit 57cfdeee92d9c32da6eb0499671185b47af39f0c[m
+Author: dayzintt <deividborges07@hotmail.com>
+Date:   Mon Oct 21 10:54:51 2024 -0300
+
+    pagina contato
+
+[33mcommit 11fff58de0da75386557434745c15e5e95dffcfa[m
+Author: dayzintt <deividborges07@hotmail.com>
+Date:   Mon Oct 21 10:43:04 2024 -0300
+
+    pagina quem-somos
+
+[33mcommit 7a3913644c7669f56b95f83cc66bc841d799faff[m
+Author: dayzintt <deividborges07@hotmail.com>
+Date:   Mon Oct 21 10:39:45 2024 -0300
+
+    pagina de cardapio
+
+[33mcommit 3326878bff6aaa574f523ddcc289c3087cee788b[m
+Author: dayzintt <deividborges07@hotmail.com>
+Date:   Mon Oct 21 10:34:34 2024 -0300
+
+    inicio do site
