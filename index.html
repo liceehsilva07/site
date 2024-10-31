@@ -7,17 +7,20 @@
 
   <link
     href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    rel="stylesheet"> <!-- Fontes externas do site -->
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> <!-- Ajuste css -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> <!-- Bootstrap de Layout css -->
+
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="./assets/jss/jss.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="./assets/jss/login-registro.js"></script>
   
-
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> <!-- Biblioteca para exibição do mapa -->
+  
 
   <title>Pizzaria</title>
 </head>
@@ -29,10 +32,8 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
-            <h1 h1 class="d-block d-xl-block d-lg-block d-md-none d-sm-none">
               <a href="./index.html" title="Ir para a página inicial">
                 <img src="./assets/images/logo.png" alt="Logo da Pizzaria"></a>
-            </h1>
           </div>
           <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
             <section id="social">
@@ -55,17 +56,15 @@
                 </li>
               </ul>
 
-              <button type="button" class="btn btn-login float-right" onclick="window.location.href='login.html'">Fazer Login</button>
+              <button type="button" class="btn btn-login float-right" onclick="window.location.href='./assets/jss/login.html'">Fazer Login</button>
+              <button type="button" class="btn btn-logout float-right" onclick="logout()">Sair</button>
 
+              
             </section>
 
             <div class="clearfix"></div>
 
             <nav class="navbar navbar-expand-lg" id="menu">
-              <h1 class="d-xi-none d-lg-none d-mb-block d-sm-block">
-                <a href="./index.html" title="Ir para a página inicial">
-                  <img src="./assets/images/logo.png" alt="Logo da Pizzaria" class="logo"></a>
-              </h1>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navebarPrincipal"
                 aria-controls="navebarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -152,7 +151,19 @@
       </div>
     </div>
   </footer>
+  
 
 </body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const userName = localStorage.getItem('userName');
+      if (userName) {
+          document.querySelector('.btn-login').textContent = `Olá, ${userName}`;
+          document.querySelector('.btn-login').disabled = true;
+      }
+  });
+</script>
+
 
 </html>

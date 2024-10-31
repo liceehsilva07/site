@@ -27,14 +27,13 @@ header{
     background-image: url('../images/bg_header.png');
     background-size: cover;
 } 
+
 /* MENU SOCIAL*/
 section#social ul{
     background-color: white;
     margin: 0;
     padding: 0.2ren;
 }
-
-
 
 /* MENU PRINCIPAL */
 
@@ -47,18 +46,13 @@ section#social ul{
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-
 #menu #navebarPrincipal ul li a {
     margin: 0 1.1rem;
-}
-
-#menu #navebarPrincipal ul li a {
     border-bottom: 1px solid transparent;
     color: white;
     font-size: 1.1rem;
     padding: 0;
     text-transform: lowercase;
-
 }
 
 #menu #navebarPrincipal ul li a:hover,
@@ -74,11 +68,11 @@ img.logo{
 .bg-yellow{
     background: url('../images/bg_red.png') repeat var(--color1);
     display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 2ren 0;
     margin-left: 40px; 
     border-radius: 10px; 
+    align-items: center; 
+    justify-content: center;
 }
 
 .bg-yellow .address h3{
@@ -91,7 +85,6 @@ img.logo{
     height: 400px;
     width: 100%;
 }
-
 
 .btn-login {
     background-color: var(--color2);
@@ -128,11 +121,6 @@ body.login {
     width: 300px;
 }
 
-.login-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 .form-group {
     margin-bottom: 15px;
 }
@@ -149,7 +137,6 @@ body.login {
     background-color: var(--color2);
     color: white;
     padding: 10px;
-    border: none;
     cursor: pointer;
 }
 
@@ -157,6 +144,23 @@ body.login {
     background-color: var(--color1);
     color: var(--color2);
 }
+
+/* Botão de Sair */
+
+.btn-logout {
+    background-color: var(--color2); 
+    color: white;                    
+    padding: 10px 20px;             
+    border-radius: 5px;              
+    cursor: pointer;                 
+    margin-right: 20px;               
+}
+
+.btn-logout:hover {
+    background-color: var(--color1); 
+    color: var(--color2);            
+}
+
 
 /* REGISTRO */
 
@@ -171,27 +175,6 @@ body.login {
 
 .register-container {
     margin-top: 20px; /* Espaço entre o formulário de login e o link de registro */
-}
-
-.register-container p {
-    margin: 0;
-}
-
-.register-container .btn-register {
-    font-size: 14px;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.register-container .btn-register:hover {
-    text-decoration: underline;
-}
-
-
-
-/* SLIDE */
-img.slide {
-    width: 100%;
 }
 
 /*CONTEUDO*/
@@ -263,6 +246,28 @@ body.pizzaria p, body.cardapio p.card-text:first-child{
     font-size: 12px;
 }
 
+#cart-dropdown {
+    top: 50px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 5px;
+    transform: translateX(-30%);
+}
+
+
+
+#cart-dropdown h4 {
+    margin-bottom: 15px;
+}
+
+#cart-dropdown button {
+    width: 100%;
+    margin-top: 15px;
+}
+
 
 
 /* CONTATO */
@@ -278,7 +283,6 @@ body.pizzaria p, body.cardapio p.card-text:first-child{
     outline: 0;
     box-shadow: 0 0 0 0 rgba(0,123,255,0);
 }
-
 
 @media (min-width: 576px) {
     /* celular */

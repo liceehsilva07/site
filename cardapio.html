@@ -9,14 +9,12 @@
     href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="./assets/jss/jss.js"></script>
+  <script src="./assets/jss/login-registro.js"></script>
 
-    
   <title>Pizzaria | CARDÁPIO</title>
 </head>
 
@@ -27,7 +25,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
-            <h1 h1 class="d-block d-xl-block d-lg-block d-md-none d-sm-none">
+            <h1 class="d-block d-xl-block d-lg-block d-md-none d-sm-none">
               <a href="./index.html" title="Ir para a página inicial">
                 <img src="./assets/images/logo.png" alt="Logo da Pizzaria"></a>
             </h1>
@@ -57,9 +55,14 @@
           </ul>
               </ul>
 
-              <button type="button" class="btn btn-login float-right">Fazer Login</button>
+              <button type="button" class="btn btn-login float-right" onclick="window.location.href='./assets/jss/login.html'">Fazer Login</button>
+              <button type="button" class="btn btn-logout float-right" onclick="logout()">Sair</button>
 
               <div class="clearfix"></div>
+
+              <div id="admin-link" style="display: none; margin-top: 20px;">
+                <a href="cadastro.html" class="btn btn-primary">Cadastrar Novo Produto</a>
+            </div>
 
             </section>
             <nav class="navbar navbar-expand-lg" id="menu">
@@ -106,155 +109,21 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6 col xs 12">
-            <div class="card mb-3" style="max-width: 33.25ren;">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="./assets/images/pizzas/pizza-atum.png" class="card-img">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Pizza de Atum</h5>
-                    <p class="card-text">Maravilhosa Pizza de Atum, com muito Atum</p>
-                    <p class="card-text">
-                      <select class="form-control pizza-size" data-name="Pizza de Atum">
-                        <option value="19.90" data-size="Pequena">Pequena - R$ 19,90</option>
-                        <option value="24.90" data-size="Média">Média - R$ 24,90</option>
-                        <option value="29.90" data-size="Grande">Grande - R$ 29,90</option>
-                        <option value="35.90" data-size="Gigante">Gigante - R$ 35,90</option>
-                      </select>
-                    </p>
-                    <button class="btn btn-success add-to-cart" data-name="Pizza de Atum">Adicionar ao Carrinho</button>                 </div>
-                </div>
-              </div>
-            </div>
+        <div class="container">
+          <!-- Container onde os produtos serão carregados dinamicamente -->
+          <div class="row" id="cardapio-container">
+              <!-- Produtos serão inseridos aqui via JavaScript -->
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col xs 12">
-            <div class="card mb-3" style="max-width: 33.25ren;">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="./assets/images/pizzas/pizza-calabresa.png" class="card-img">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Pizza de Calabresa</h5>
-                    <p class="card-text">Maravilhosa Pizza de Calabresa, com muita Calabresa
-                    </p>
-                    <p class="card-text">
-                      <select class="form-control pizza-size" data-name="Pizza de Calabresa">
-                        <option value="19.90" data-size="Pequena">Pequena - R$ 19,90</option>
-                        <option value="24.90" data-size="Média">Média - R$ 24,90</option>
-                        <option value="29.90" data-size="Grande">Grande - R$ 29,90</option>
-                        <option value="35.90" data-size="Gigante">Gigante - R$ 35,90</option>
-                      </select>
-                    </p>
-                    <button class="btn btn-success add-to-cart" data-name="Pizza de Calabresa">Adicionar ao Carrinho</button></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col xs 12">
-            <div class="card mb-3" style="max-width: 33.25ren;">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="./assets/images/pizzas/pizza-camarao.png" class="card-img">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Pizza de Camarão</h5>
-                    <p class="card-text">Maravilhosa Pizza de camarão, com muito camarão
-                    </p>
-                    <p class="card-text">
-                      <select class="form-control pizza-size" data-name="Pizza de Camarão">
-                        <option value="19.90" data-size="Pequena">Pequena - R$ 19,90</option>
-                        <option value="24.90" data-size="Média">Média - R$ 24,90</option>
-                        <option value="29.90" data-size="Grande">Grande - R$ 29,90</option>
-                        <option value="35.90" data-size="Gigante">Gigante - R$ 35,90</option>
-                      </select>
-                    </p>
-                    <button class="btn btn-success add-to-cart" data-name="Pizza de Camarão">Adicionar ao Carrinho</button></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col xs 12">
-            <div class="card mb-3" style="max-width: 33.25ren;">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="./assets/images/pizzas/pizza-frango-com-catupiry.png" class="card-img">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Pizza de Frango com Catupiry</h5>
-                    <p class="card-text">Maravilhosa Pizza de Frango com Catupiry, com muito Catupiry
-                    </p>
-                    <p class="card-text">
-                      <select class="form-control pizza-size" data-name="Pizza de Frango Catupiry">
-                        <option value="19.90" data-size="Pequena">Pequena - R$ 19,90</option>
-                        <option value="24.90" data-size="Média">Média - R$ 24,90</option>
-                        <option value="29.90" data-size="Grande">Grande - R$ 29,90</option>
-                        <option value="35.90" data-size="Gigante">Gigante - R$ 35,90</option>
-                      </select>
-                    </p>
-                    <button class="btn btn-success add-to-cart" data-name="Pizza de Frango Catupiry">Adicionar ao Carrinho</button> </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col xs 12">
-            <div class="card mb-3" style="max-width: 33.25ren;">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="./assets/images/pizzas/pizza-mussarela.png" class="card-img">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Pizza de Mussarela</h5>
-                    <p class="card-text">Maravilhosa Pizza de Mussarela, com muita Mussarela
-                    </p>
-                    <p class="card-text">
-                      <select class="form-control pizza-size" data-name="Pizza de Mussarela">
-                        <option value="19.90" data-size="Pequena">Pequena - R$ 19,90</option>
-                        <option value="24.90" data-size="Média">Média - R$ 24,90</option>
-                        <option value="29.90" data-size="Grande">Grande - R$ 29,90</option>
-                        <option value="35.90" data-size="Gigante">Gigante - R$ 35,90</option>
-                      </select>
-                    </p>
-                    <button class="btn btn-success add-to-cart" data-name="Pizza de Mussarela">Adicionar ao Carrinho</button> </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col xs 12">
-            <div class="card mb-3" style="max-width: 33.25ren;">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="./assets/images/pizzas/pizza-portuguesa.png" class="card-img">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Pizza Portuguesa</h5>
-                    <p class="card-text">Maravilhosa Pizza portuguesa, com muita coisa gostosa
-                    </p>
-                    <p class="card-text">
-                      <select class="form-control pizza-size" data-name="Pizza Portuguesa">
-                        <option value="19.90" data-size="Pequena">Pequena - R$ 19,90</option>
-                        <option value="24.90" data-size="Média">Média - R$ 24,90</option>
-                        <option value="29.90" data-size="Grande">Grande - R$ 29,90</option>
-                        <option value="35.90" data-size="Gigante">Gigante - R$ 35,90</option>
-                      </select>
-                    </p>
-                    <button class="btn btn-success add-to-cart" data-name="Pizza Portuguesa">Adicionar ao Carrinho</button>   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-
-  </section>
-
+      
+      <!-- Menu suspenso do carrinho -->
+      <div id="cart-dropdown" class="dropdown-menu dropdown-menu-right" style="display: none; padding: 20px;">
+        <h4>Carrinho</h4>
+        <div id="cart-items"></div> <!-- Aqui os itens serão adicionados -->
+        <p><strong>Total:</strong> R$ <span id="cart-total">0.00</span></p>
+        <button class="btn btn-success" id="finalizar-compra">Finalizar Compra</button>
+      </div>
+      
 
   <footer>
     <div class="all footer">
@@ -268,8 +137,6 @@
     </div>
   </footer>
 
-
-
+  
 </body>
-
 </html>
